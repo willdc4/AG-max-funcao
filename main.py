@@ -35,7 +35,7 @@ populacao = []
 
 for i in range(30):
     x = random.randint(-10,10)
-    x =f'{x:05b}' # formatar o inteiro para binário com 5 dígitos
+    x = f'{x:05b}' # formatar o inteiro para binário com 5 dígitos
     x = x.replace('-','1')
     populacao.append(x)
 
