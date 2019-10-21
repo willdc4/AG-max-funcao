@@ -23,7 +23,7 @@ def funcao_objetivo(x):
     x = int(x)
     return (x * x) - (3 * x) + 4
 
-def torneio(populacao, aptidao):
+def torneio(populacao):
     aptidao = []
     for x in populacao:
         aptidao.append(funcao_objetivo(binario_para_decimal(x)))
@@ -32,8 +32,7 @@ def torneio(populacao, aptidao):
 def crossover(populacao):
 '''
 populacao = []
-aptidao = []
-populacao_decimal = []
+
 for i in range(30):
     x = random.randint(-10,10)
     x =f'{x:05b}' # formatar o inteiro para binário com 5 dígitos
@@ -41,4 +40,4 @@ for i in range(30):
     populacao.append(x)
 
 print(populacao)
-torneio(populacao,aptidao)
+torneio(populacao)
