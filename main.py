@@ -10,6 +10,7 @@ import random
 
 populacao = []
 
+##para representar de 0 a 10 é preciso 4 bits 
 for i in range(30):
     x = random.randint(-10,10) #valor de x varia de -10 a 10
     print('ANTES', x)
