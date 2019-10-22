@@ -23,13 +23,20 @@ def funcao_objetivo(x):
     x = int(x)
     return (x * x) - (3 * x) + 4
 
-def torneio(populacao):
-    aptidao = []
-    for x in populacao:
-        aptidao.append(funcao_objetivo(binario_para_decimal(x)))
-    #print(aptidao)
+def torneio(populacao, num_individuos):
+    #escolher para o torneio
+    vencedor = None
+    
+    for i in range(num_individuos):
+        individuo = random.choice(populacao)
+        if (vencedor is None) or funcao_objetivo(individuo) > funcao_objetivo(vencedor):
+            vencedor = individuo
+    return vencedor
+
 '''
-def crossover(populacao):
+def crossover(pais):
+    ponto_corte = random.randint(1,4)
+    pai1 = random.choice(populacao)
 '''
 populacao = []
 
@@ -39,5 +46,12 @@ for i in range(30):
     x = x.replace('-','1')
     populacao.append(x)
 
-print(populacao)
-torneio(populacao)
+#print(populacao)
+# Condição de parada 20 gerações
+for i in range(1):
+    pais = []
+    for j in range(20): # Quantidade de pais a serem selecionados
+        pais.append(torneio(populacao,2))
+        
+
+    print(pais)
