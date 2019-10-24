@@ -45,7 +45,7 @@ def crossover(pais):
     num_pares = len(pais)//2
     nova_populacao = []
     for i in range(num_pares):
-        ponto_corte = random.randint(1,4)
+        ponto_corte = random.randint(1,4) # Posição aleatória para o corte do crossover
         prob_crossover = random.uniform(0.0,1.0)
         # Escolhe os pais
         pai_1 = random.choice(pais)
