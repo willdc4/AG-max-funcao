@@ -85,10 +85,10 @@ populacao = []
 # Gerando a população inicial
 for i in range(30):
     x = random.randint(-10,10)
-    x = f'{x:05b}' # formatar o inteiro para binário com 5 dígitos
+    x = '{:05b}'.format(x) # formatar o inteiro para binário com 5 dígitos
     x = x.replace('-','1')
     populacao.append(x)
-print("População inicial:\n", populacao, "\n")
+print("\nPopulação inicial:\n\n", populacao, "\n")
 
 # Condição de parada 20 gerações
 for i in range(20):
